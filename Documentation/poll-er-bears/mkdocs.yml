@@ -1,6 +1,10 @@
-site_name: My Docs
+site_name: Poll-er Bear
 nav:
   - index.md
   - hello.md
-
+theme:
+  name: 'material'
+  palette:
+    primary: 'purple'
+    accent: 'purple'
 use_directory_urls: false
