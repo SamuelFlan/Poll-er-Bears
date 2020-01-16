@@ -1,4 +1,7 @@
-# Welcome to MkDocs
+# Poll-er Bear
+
+Poll-er Bear est une application simple de sondages.
+
 
 For full documentation visit [mkdocs.org](https://mkdocs.org).
 

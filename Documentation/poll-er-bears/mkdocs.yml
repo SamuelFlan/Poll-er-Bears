@@ -1,7 +1,7 @@
 site_name: Poll-er Bear
 nav:
-  - index.md
-  - hello.md
+  - Accueil: index.md
+  - Crédits: hello.md
 theme:
   name: 'material'
   palette:
