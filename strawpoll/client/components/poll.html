@@ -4,8 +4,8 @@
 		
 		{{ #each indexedArray choices }}
 			<a href="#" class="vote btn btn-primary btn-block" data-id="{{ _index }}">
-				<span class="votes pull-right">{{ votes }}</span>
-				<span class="text">{{ text }}</span>
+				<span class="text">{{ text }} : </span>
+				<span class="votes pull-right">{{ votes }} votes.</span>
 			</a> <br />
 		{{ /each }}
 	</div>

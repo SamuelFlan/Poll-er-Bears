@@ -6,7 +6,6 @@ Meteor.startup(function() {
   // code to run on server at startup
   // if there are no polls available create sample data
   if (Polls.find().count() === 0) {
-
     // create sample polls
     var samplePolls = [
       {
@@ -21,7 +20,7 @@ Meteor.startup(function() {
         question: 'Is CSS3 Flexbox the greatest thing since array_slice(bread)?',
         choices: [
           { text: '100% yes', votes: 0 },
-          { text: '200% yes', votes: 0 },
+          { text: '200% yes', votes: 1 },
           { text: '300% yes', votes: 0 }
         ]
       }

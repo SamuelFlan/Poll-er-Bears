@@ -3,8 +3,8 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 import '../collections/polls.js';
-import './components/poll.html'
-import './components/poll-form.html'
+import './components/poll-form.js';
+import './components/poll.js';
 
 Template.body.helpers({
 	polls: function() {
