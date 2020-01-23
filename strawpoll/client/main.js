@@ -6,6 +6,9 @@ import '../collections/polls.js';
 import './components/poll.html'
 import './components/poll-form.html'
 
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 Template.body.helpers({
 	polls: function() {
 		return Polls.find();
