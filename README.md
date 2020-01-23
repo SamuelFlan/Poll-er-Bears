@@ -6,3 +6,6 @@ SET PATH=C:\Temp\\.meteor;%PATH%
 
 # Réinstallation du .meteor
 meteor npm install
+
+# Téléchargement de bootstrap
+meteor npm install --save bootstrap jquery popper.js
