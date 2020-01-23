@@ -9,3 +9,6 @@ meteor npm install
 
 # Téléchargement de bootstrap
 meteor npm install --save bootstrap jquery popper.js
+
+# Installation de Font Awesome
+npm install --save @fortawesome/fontawesome-free
