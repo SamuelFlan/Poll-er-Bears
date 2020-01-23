@@ -1,8 +1,13 @@
 .question-group {
   margin-bottom:20px;
-  background:#EEE;
+  background:#b0e660;
+
   padding:20px;
 }
 .form-group label {
   font-size:18px;
+}
+
+.btn {
+  background-color: green;
 }
