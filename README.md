@@ -5,7 +5,8 @@ A simple Poll App in JS, created with Meteor + ReactJS
 SET PATH=C:\Temp\\.meteor;%PATH%
 
 # Réinstallation du .meteor
-meteor npm install
+dans le dossier père : meteor create strawpoll
+//meteor npm install (a voir)
 
 # Téléchargement de bootstrap
 meteor npm install --save bootstrap jquery popper.js
