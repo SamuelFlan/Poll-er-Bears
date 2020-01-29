@@ -1,13 +1,12 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './main.html';
 import '../collections/polls.js';
 import './components/poll-form.js';
 import './components/poll.js';
-
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/account-config.js';
 
 Template.body.helpers({
 	polls: function() {
@@ -23,3 +22,4 @@ UI.registerHelper('indexedArray', function(context, options) {
     });
   }
 });
+

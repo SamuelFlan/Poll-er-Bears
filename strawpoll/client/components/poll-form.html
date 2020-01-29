@@ -1,4 +1,5 @@
 <template name="pollForm">
+	{{#if isLog}}
 	<form class="ajout"> 
 		<div class="question-group">
 			<label>Question</label>
@@ -20,4 +21,5 @@
 
 		<button type="submit" class="btn btn-lg btn-success btn-block">Create Poll</button>
 	</form>
+	{{/if}}
 </template>
