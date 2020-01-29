@@ -16,3 +16,6 @@ meteor npm install --save bootstrap jquery popper.js
 
 # Installation de Font Awesome
 npm install --save @fortawesome/fontawesome-free
+
+# Installation du package pour le login
+meteor add accounts-ui accounts-password
