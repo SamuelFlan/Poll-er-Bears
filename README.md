@@ -8,6 +8,9 @@ SET PATH=C:\Temp\\.meteor;%PATH%
 dans le dossier père : meteor create strawpoll
 //meteor npm install (a voir)
 
+# Installation du package underscore
+meteor add underscore
+
 # Téléchargement de bootstrap
 meteor npm install --save bootstrap jquery popper.js
 
