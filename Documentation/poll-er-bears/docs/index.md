@@ -3,6 +3,8 @@
 Poll-er Bear est une application simple de sondages.
 
 
+For full documentation visit [mkdocs.org](https://mkdocs.org).
+
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
@@ -12,12 +14,7 @@ Poll-er Bear est une application simple de sondages.
 
 ## Project layout
 
-```
-Poll-er-Bears/
-	Documentation/   # Le dossier de la documentation
-		... 
-	strawpoll/		 # le projet
-		client/
-		collections/
-		...
-```
+    mkdocs.yml    # The configuration file.
+    docs/
+        index.md  # The documentation homepage.
+        ...       # Other markdown pages, images and other files.
