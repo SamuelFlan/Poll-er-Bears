@@ -12,6 +12,9 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			{{> loginButtons}}
+			{{#if isAdmin}}
+				<i class="drop fas fa-times"></i>
+			{{/if}}
 		</nav>
 	</header>
 

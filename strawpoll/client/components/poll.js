@@ -34,7 +34,7 @@ Template.poll.events({
 	'click .delete'(event) {
 		event.preventDefault();
 		
-		var pollID = $(event.currentTarget).parent('.poll').data('id');
+		var pollID = $(event.currentTarget).parent('.titre').parent('.poll').data('id');
 		Polls.remove(pollID);
 	}
 });
