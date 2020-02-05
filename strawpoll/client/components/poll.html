@@ -1,9 +1,9 @@
 <template name="poll">
 	<div class="poll well well-lg" data-id="{{ _id }}">
-		{{#if isOwner}}
+		<div class="head_poll" >{{#if isOwner}}
 			<i class="delete fas fa-times"></i>
 		{{/if}}
-		<h2>{{ newPoll.question }}</h2>
+		<h2>{{ newPoll.question }}</h2> </div>
 
 		{{ #each indexedArray newPoll.choices }}
 			<a href="#" class="vote btn btn-block" data-id="{{ _index }}">
