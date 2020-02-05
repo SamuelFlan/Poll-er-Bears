@@ -1,0 +1,14 @@
+site_name: Poll-er Bear
+nav:
+  - Accueil: index.md
+  - First Start:
+    - 'Installation': install.md
+    - 'Lancement et Quick Tour': run.md
+  - Base de données: db.md
+  - Crédits: hello.md
+theme:
+  name: 'material'
+  palette:
+    primary: 'purple'
+    accent: 'purple'
+use_directory_urls: false
