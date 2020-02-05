@@ -36,7 +36,7 @@
     
     
       
-        <title>Poll-er Bear</title>
+        <title>Base de données - Poll-er Bear</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#poll-er-bear" tabindex="1" class="md-skip">
+      <a href="#base-de-donnees" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Accueil
+                Base de données
               
             </span>
           
@@ -176,56 +176,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Accueil
-      </label>
-    
-    <a href="index.html" title="Accueil" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="index.html" title="Accueil" class="md-nav__link">
       Accueil
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -281,11 +236,56 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="db.html" title="Base de données" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Base de données
+      </label>
+    
+    <a href="db.html" title="Base de données" class="md-nav__link md-nav__link--active">
       Base de données
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-dun-poll" class="md-nav__link">
+    Structure d'un poll
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisateurs" class="md-nav__link">
+    Utilisateurs
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -322,15 +322,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#structure-dun-poll" class="md-nav__link">
+    Structure d'un poll
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#utilisateurs" class="md-nav__link">
+    Utilisateurs
   </a>
   
 </li>
@@ -352,24 +352,31 @@
               
                 
                 
-                <h1 id="poll-er-bear">Poll-er Bear</h1>
-<p>Poll-er Bear est une application simple de sondages.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>Poll-er-Bears/
-    Documentation/   # Le dossier de la documentation
-        ... 
-    strawpoll/       # le projet
-        client/
-        collections/
-        ...
+                <h1 id="base-de-donnees">Base de données</h1>
+<h2 id="structure-dun-poll">Structure d'un poll</h2>
+<p>​
+Un poll est un objet JSON. Il est composé de la façon suivante:</p>
+<pre><code>{
+    &quot;_id&quot;: &quot;BQMeDeN6yE4k7SYPD&quot;,
+
+    &quot;createdAt&quot;: &quot;Date Wed Feb 05 2020 08:10:54 GMT+0100 (Central European Standard Time)&quot;,
+​​​
+    newPoll: {  
+        choices: (3) [ 
+            0: Object { text: &quot;Pizza&quot;, votes: 3 }
+            1: Object { text: &quot;Tacos&quot;, votes: 0 }
+            2: Object { text: &quot;Cerf-volant&quot;, votes: 6 }
+        ],
+        &quot;question&quot;: &quot;On mange quoi ce midi?&quot;,
+        owner: &quot;ANXwWfowSzKmdgE53&quot;
+    }
+​​}
+​
 </code></pre>
+
+<p>Il est possible de récupérer les polls avec la commande <code>Polls.find().fetch()</code>.</p>
+<h2 id="utilisateurs">Utilisateurs</h2>
+<p>Les utilisateurs sont gérés avec le package <a href="https://docs.meteor.com/api/accounts.html">accounts</a> de meteor. </p>
                 
                   
                 
@@ -391,14 +398,28 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
+          <a href="run.html" title="Lancement et Quick Tour" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Lancement et Quick Tour
+              </span>
+            </div>
+          </a>
         
-          <a href="install.html" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="hello.html" title="Crédits" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installation
+                Crédits
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
