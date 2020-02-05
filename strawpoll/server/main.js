@@ -1,3 +1,4 @@
+
 import { Meteor } from 'meteor/meteor';
 
 import '../collections/polls.js';
@@ -31,4 +32,10 @@ Meteor.startup(function() {
 			Polls.insert(poll);
 		});
 	}
+	/*Meteor.users.insert({
+		username: 'blbl', 
+		password: 'cunmdp'
+	});*/
+	
+	console.log(Meteor.users);
 });
